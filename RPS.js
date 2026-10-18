@@ -11,3 +11,9 @@ function getComputerChoice() {
     else if (numb <= 0.67) {return "paper";}
     else {return "scissors";}
 }
+console.log(getComputerChoice());
+
+function getHumanChoice() {
+    let choice = prompt("Enter your choice");
+    return choice.toLowerCase();
+}
