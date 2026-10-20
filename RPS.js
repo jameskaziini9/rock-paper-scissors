@@ -20,3 +20,23 @@ function getHumanChoice() {
 
 let humanScore = 0;
 let computerScore = 0;
+
+/*
+if humanChoice === computerChoice then print draw; 
+elseif (humanChoice  === "rock" && computerChoice === "scissors") || (humanChoice === "scissors" && computerChoice === "paper") || (humanChoice === "paper" && computerChoice === "rock"); console.log("human win") and add 1 to the humanScore
+else computer wins; console.log("computer wins") and add 1 to the computerScore
+*/
+
+function playRound(humanChoice, computerChoice) {
+    humanChoice = humanChoice.toLowerCase();
+    if (humanChoice === computerChoice) {
+        console.log("Draw");
+    } else if ((humanChoice === "rock" && computerChoice === "scissors") || (humanChoice === "scissors" && computerChoice === "paper") || (humanChoice === "paper" && computerChoice === "rock")) {
+        console.log("Human wins, computer loses"); humanScore ++;
+    } else {console.log("computer wins, human loses"); computerScore ++}
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
